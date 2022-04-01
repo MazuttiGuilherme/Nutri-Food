@@ -25,6 +25,8 @@ function Header () {
   )
 }
 
+
+
 function Footer () {
   return (
     <footer className='footer text-center text-white py-2 mt-4'>
@@ -33,12 +35,24 @@ function Footer () {
   )
 }
 
-function HomeView () {
+function Layout ({children}) {
+  //const children = props.children
+  //const {children} = props
   return (
     <>
-      <Header/>
+      <Header />
         <main>
-          <Container>
+          {children}
+        </main>
+      <Footer/>
+    </>
+  )
+}
+
+function HomeView () {
+  return (
+      <Layout>
+      <Container>
             <div className='shadow border p-4p-md-5 my-3 banner-home d-md-flex align-items-center'>
                 <div>
                   <h1>Bem vindo(a) a Dark-Kitchens!</h1>  
@@ -51,9 +65,15 @@ function HomeView () {
                 </div>
             </div>
           </Container>
-        </main>
-      <Footer/>
-   </>
+      </Layout>
+  )
+}
+
+function NotFoundView () {
+  return (
+    <Layout>
+      <h1>Página não encontrada</h1>
+    </Layout>
   )
 }
 
