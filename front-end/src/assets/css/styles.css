@@ -1,5 +1,5 @@
 .main-navbar {
-    background-color: '#C45824';
+    background-color: '#e2725b';
     max-height: 200px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .main-navbar .nav-link {
-    background-color: #fff;
+    background-color:  #e2725b;
     border-radius: 3px;
     text-align: center;
     margin: 5px 0;
@@ -20,6 +20,23 @@
     .main-navbar .nav-link {
         margin: 0 5px;
     }
+}
+
+.footer {
+    background-color: '#e2725b';
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#root > main {
+    flex: 1;
 }
 
 

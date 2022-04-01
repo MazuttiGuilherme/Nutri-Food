@@ -8,7 +8,7 @@ function Header () {
       <Navbar bg='warning' expand='md' className='main-navbar'>
         <Container>
           <Navbar.Brand href='/'>
-          <img src={Logo} alt='Dark-Kitchens'/>
+          <img src={Logo} alt='Dark-Kitchens' width={181} height={181}/>
           </Navbar.Brand>
           <Navbar.Toggle 
           aria-controls='navbar-header'/>
@@ -24,13 +24,23 @@ function Header () {
   )
 }
 
+function Footer () {
+  return (
+    <footer className='footer text-center text-black py-2 mt-4'>
+      <p className='m-0'>Todos os direitos reservados a Dark-Kitchens.</p>
+    </footer>
+  )
+}
+
 function HomeView () {
   return (
     <>
       <Header/>
-      <p>Conteúdo</p>
-      <p>Rodapé</p>
-    </> 
+      <main>
+        <p>Conteúdo</p>
+      </main>
+      <Footer/>
+   </>
   )
 }
 
