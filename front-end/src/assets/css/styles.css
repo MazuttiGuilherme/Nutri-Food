@@ -47,3 +47,8 @@ html, body, #root {
     font-size: 1.125rem;
 }
 
+.banner-home > div {
+    flex: 1;
+}
+
+
