@@ -1,6 +1,7 @@
 import { Button, Container } from 'react-bootstrap'
 import { Layout } from '../../components/Layout'
 import Banner from  '../../assets/img/banner.jpg'
+import { Link } from 'react-router-dom'
 
 export function HomeView () {
     return (
@@ -11,7 +12,7 @@ export function HomeView () {
                     <h1>Bem vindo(a) a Dark-Kitchen!</h1>  
                     <p>Conheça nossas cozinhas.</p>
                     <p>Contrate a sua agora mesmo.</p>
-                    <Button className='text-uppercase' >Kitchens</Button>
+                    <Button as={Link} to='/Kitchens' className='text-uppercase' >Kitchens</Button>
                   </div>
                   <div> 
                     <img src={Banner} alt='Dark-Kitchens' width={626} height={391} className='img-fluid' />
