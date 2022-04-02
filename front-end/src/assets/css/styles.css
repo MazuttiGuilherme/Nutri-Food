@@ -1,5 +1,5 @@
 .main-navbar {
-    background-color: '#e2725b';
+    background-color: var(--main-color);
     max-height: 200px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .main-navbar .nav-link {
-    background-color:  #fff;
+    background-color:  darkolivegreen;
     border-radius: 3px;
     text-align: center;
     margin: 5px 0;
@@ -23,7 +23,7 @@
 }
 
 .footer {
-    background-color: #e2725b;
+    background-color: var(--main-color);
 }
 
 html, body, #root {
@@ -35,12 +35,17 @@ html, body, #root {
     flex-direction: column;
 }
 
+:root {
+	--main-color: #e2725b;
+}
+
+
 #root > main {
     flex: 1;
 }
 
 .banner-home h1{
-    color: #e2725b;
+    color: var(--main-color)
 }
 
 .banner-home p {
@@ -50,5 +55,23 @@ html, body, #root {
 .banner-home > div {
     flex: 1;
 }
+
+.btn-green {
+    background-color: darkolivegreen;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: darkolivegreen;
+    border-color: darkgreen; /*set the color you want here*/
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: darkolivegreen;
+    border-color: darkgreen;
+}
+
+
+
 
 
