@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar} from 'react-bootstrap'
-import Logo from '../../assets/img/logo.jpg'
+import Logo from '../../assets/img/2.svg'
 import { Link } from "react-router-dom"
 
 export function Header () {
@@ -8,7 +8,7 @@ export function Header () {
         <Navbar expand='md' className='main-navbar'>
           <Container>
                 <Navbar.Brand as={Link} to='/'>
-                    <img src={Logo} alt='Dark-Kitchens' width={181} height={181}/>
+                    <img src={Logo} alt='Nutri-Food' width={181} height={181}/>
                     </Navbar.Brand>
                     <Navbar.Toggle 
                     aria-controls='navbar-header'/>

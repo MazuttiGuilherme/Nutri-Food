@@ -9,7 +9,7 @@
 }
 
 .main-navbar .nav-link {
-    background-color:  darkolivegreen;
+    background-color:  var(--secondary-color);
     border-radius: 3px;
     text-align: center;
     margin: 5px 0;
@@ -36,7 +36,8 @@ html, body, #root {
 }
 
 :root {
-	--main-color: #e2725b;
+	--main-color:#234F1E;
+    --secondary-color: #EFA678;
 }
 
 
@@ -57,20 +58,19 @@ html, body, #root {
 }
 
 .btn-green {
-    background-color: darkolivegreen;
+    background-color: var(--main-color);
 }
 
 .btn-primary {
     color: #fff;
-    background-color: darkolivegreen;
-    border-color: darkgreen; /*set the color you want here*/
+    background-color: var(--main-color);
+    border-color: #2E8B57; /*set the color you want here*/
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: darkolivegreen;
-    border-color: darkgreen;
+    background-color: var(--main-color);
+    border-color: #2E8B57;
 }
-
 
 
 
