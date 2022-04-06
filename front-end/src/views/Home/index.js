@@ -15,7 +15,7 @@ export function HomeView () {
                     <Button as={Link} to='/Kitchens' className='text-uppercase' >Kitchens</Button>
                   </div>
                   <div> 
-                    <img src={Banner} alt='Dark-Kitchens' width={626} height={391} className='img-fluid' />
+                    <img src={Banner} alt='Nutri-Food' width={626} height={391} className='img-fluid' />
                   </div>
               </div>
             </Container>
