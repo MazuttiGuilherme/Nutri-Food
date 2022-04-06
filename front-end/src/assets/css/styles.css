@@ -72,6 +72,8 @@ html, body, #root {
     border-color: #2E8B57;
 }
 
-
+.footer p {
+    color: var(--secondary-color)
+}
 
 
