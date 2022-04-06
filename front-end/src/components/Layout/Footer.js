@@ -3,7 +3,7 @@ export default function Footer () {
       <footer 
       className='footer text-center text-white py-2 mt-4'
       >
-        <p className='m-0'>Todos os direitos reservados a Dark-Kitchens.</p>
+        <p className='m-0'>Todos os direitos reservados a Nutri-Food.</p>
       </footer>
     )
   }
