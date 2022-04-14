@@ -10,9 +10,9 @@ export function HomeView () {
               <div className='shadow border p-4p-md-5 my-3 banner-home d-md-flex align-items-center'>
                   <div>
                     <h1>Bem vindo(a) a Nutri Food.</h1>  
-                    <p>Conheça nossas cozinhas.</p>
-                    <p>Contrate agora mesmo!</p>
-                    <Button as={Link} to='/Kitchens' className='text-uppercase' >Kitchens</Button>
+                    <p>Conheça nossos planos fit.</p>
+                    <p>Inscreva-se agora mesmo!</p>
+                    <Button as={Link} to='/Kitchens' className='text-uppercase' >Planos Fit</Button>
                   </div>
                   <div> 
                     <img src={Banner} alt='Nutri-Food' width={626} height={391} className='img-fluid' />

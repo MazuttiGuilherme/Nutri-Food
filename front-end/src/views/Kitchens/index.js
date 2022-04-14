@@ -19,7 +19,7 @@ import { Loading } from '../../components/Loading'
                     setLoading(false)
                 })
                 .catch(() => {
-                    setErrorMsg ('Falha ao buscar cursos. Recarregue a página.')
+                    setErrorMsg ('Falha ao buscar informações. Recarregue a página.')
                     setLoading(false)
                 })
                 .finally(() => {
