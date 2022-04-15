@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import { Loading } from "../../components/Loading";
 import { NotFoundView } from "../NotFound";
+import { Inscriptions } from "./inscriptions";
 
 export function KitchenDetailView() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export function KitchenDetailView() {
     const fetchKitchen = async () => {
       try {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/
-        kitchens/${id}`);
+        kitchens/${id}?_embed=inscriptions`);
         if (!response.ok) {
             throw new Error('Response not ok.')
         }
@@ -42,8 +43,13 @@ export function KitchenDetailView() {
         <Container>
             {errorMsg ? (
                 <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
-            ) :(        
+            ) :(
+        <>      
             <h1>{kitchen?.name}</h1>
+            <p>{kitchen.description}</p>
+            <Inscriptions inscriptions={kitchen.inscriptions} />
+
+        </>
             )}
         </Container>
     </Layout>
