@@ -36,8 +36,8 @@ html, body, #root {
 }
 
 :root {
-	--main-color:#008000;
-    --secondary-color: #E2725B;
+	--main-color:#9be198;
+    --secondary-color: #B02C0C;
 }
 
 
@@ -58,18 +58,18 @@ html, body, #root {
 }
 
 .btn-green {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
 }
 
 .btn-primary {
     color: #fff;
-    background-color: var(--main-color);
-    border-color: #2E8B57; /*set the color you want here*/
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color); /*set the color you want here*/
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: var(--main-color);
-    border-color: #2E8B57;
+    border-color: var(--main-color);
 }
 
 .footer p {

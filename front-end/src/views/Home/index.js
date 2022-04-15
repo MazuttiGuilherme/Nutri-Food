@@ -11,8 +11,8 @@ export function HomeView () {
                   <div>
                     <h1>Bem vindo(a) a Nutri Food.</h1>  
                     <p>Conheça nossos planos fit.</p>
-                    <p>Inscreva-se agora mesmo!</p>
-                    <Button as={Link} to='/Kitchens' className='text-uppercase' >Planos Fit</Button>
+                    <p>Contrate o seu agora mesmo!</p>
+                    <Button as={Link} to='/Kitchens' className='text-uppercase' >Planos</Button>
                   </div>
                   <div> 
                     <img src={Banner} alt='Nutri-Food' width={626} height={391} className='img-fluid' />

@@ -29,7 +29,7 @@ import { Loading } from '../../components/Loading'
         return (
             <Layout>
                 <Container>
-                    <h1 className='text-center mt-4'>Kitchens</h1>
+                    <h1 className='text-center mt-4'>Nossos Planos</h1>
                     {loading && (
                         <Loading />
                     )}
