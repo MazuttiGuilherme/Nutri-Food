@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import { Loading } from "../../components/Loading";
 import { NotFoundView } from "../NotFound";
+import { InscriptionForm } from "./inscriptionForm";
 import { Inscriptions } from "./inscriptions";
 
 export function KitchenDetailView() {
@@ -48,6 +49,7 @@ export function KitchenDetailView() {
             <h1>{kitchen?.name}</h1>
             <p>{kitchen.description}</p>
             <Inscriptions inscriptions={kitchen.inscriptions} />
+            <InscriptionForm />
 
         </>
             )}
