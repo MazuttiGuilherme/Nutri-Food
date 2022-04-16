@@ -41,7 +41,7 @@ export function KitchenDetailView() {
   }
   return (
     <Layout>
-        <Container>
+        <Container className="course-detail-container">
             {errorMsg ? (
                 <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
             ) :(

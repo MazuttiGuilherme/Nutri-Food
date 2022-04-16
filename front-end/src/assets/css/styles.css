@@ -57,6 +57,10 @@ html, body, #root {
     flex: 1;
 }
 
+.course-detail-container {
+    max-width: 900px;
+}
+
 .btn-green {
     background-color: var(--secondary-color);
 }
