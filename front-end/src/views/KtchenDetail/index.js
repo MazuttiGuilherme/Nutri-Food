@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Alert, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
@@ -11,28 +11,28 @@ export function KitchenDetailView() {
   const { id } = useParams();
   const [kitchen, setKitchen] = useState();
   const [loading, setLoading] = useState(true);
-  const [errorMsg, setErrorMsg] = useState();
+  const [errorMsg, setErrorMsg] = useState()
+  const fetchKitchen = useCallback(async () => {
+    try {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/
+    kitchens/${id}?_embed=inscriptions`);
+    if (!response.ok) {
+        throw new Error('Response not ok.')
+    }
+    const data = await response.json();
+    setKitchen(data);
+    setLoading(false);
+  } catch (err){
+      const message = err.message === 'Response not ok.'
+      ? '404' 
+      :'Falha ao buscar informações do curso. Recarregue a página.'
+      setErrorMsg(message)
+      setLoading(false)
+  }
+}, [id] )
   useEffect(() => {
-    const fetchKitchen = async () => {
-      try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/
-        kitchens/${id}?_embed=inscriptions`);
-        if (!response.ok) {
-            throw new Error('Response not ok.')
-        }
-        const data = await response.json();
-        setKitchen(data);
-        setLoading(false);
-      } catch (err){
-          const message = err.message === 'Response not ok.'
-          ? '404' 
-          :'Falha ao buscar informações do curso. Recarregue a página.'
-          setErrorMsg(message)
-          setLoading(false)
-      }
-    };
     fetchKitchen();
-  }, [id]);
+  }, [fetchKitchen]);
   if (loading) {
     return <Loading />;
   }
@@ -41,7 +41,7 @@ export function KitchenDetailView() {
   }
   return (
     <Layout>
-        <Container className="course-detail-container">
+        <Container className="kitchen-detail-container">
             {errorMsg ? (
                 <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
             ) :(
@@ -49,8 +49,7 @@ export function KitchenDetailView() {
             <h1>{kitchen?.name}</h1>
             <p>{kitchen.description}</p>
             <Inscriptions inscriptions={kitchen.inscriptions} />
-            <InscriptionForm />
-
+            <InscriptionForm kitchenId={id} onRegister= {fetchKitchen} />
         </>
             )}
         </Container>
