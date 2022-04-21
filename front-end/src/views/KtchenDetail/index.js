@@ -3,6 +3,7 @@ import { Alert, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import { Loading } from "../../components/Loading";
+import { getKitchenById } from "../../services/Kitchens.service";
 import { NotFoundView } from "../NotFound";
 import { InscriptionForm } from "./inscriptionForm";
 import { Inscriptions } from "./inscriptions";
@@ -14,22 +15,17 @@ export function KitchenDetailView() {
   const [errorMsg, setErrorMsg] = useState()
   const fetchKitchen = useCallback(async () => {
     try {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/
-    kitchens/${id}?_embed=inscriptions`);
-    if (!response.ok) {
-        throw new Error('Response not ok.')
-    }
-    const data = await response.json();
-    setKitchen(data);
-    setLoading(false);
+      const data = await getKitchenById(id)
+      setKitchen(data);
+      setLoading(false);
   } catch (err){
       const message = err.message === 'Response not ok.'
       ? '404' 
-      :'Falha ao buscar informações do curso. Recarregue a página.'
+      :'Falha ao buscar informações. Recarregue a página.'
       setErrorMsg(message)
       setLoading(false)
   }
-}, [id] )
+}, [id])
   useEffect(() => {
     fetchKitchen();
   }, [fetchKitchen]);
@@ -46,7 +42,7 @@ export function KitchenDetailView() {
                 <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
             ) :(
         <>      
-            <h1>{kitchen?.name}</h1>
+            <h1>{kitchen.name}</h1>
             <p>{kitchen.description}</p>
             <Inscriptions inscriptions={kitchen.inscriptions} />
             <InscriptionForm kitchenId={id} onRegister= {fetchKitchen} />

@@ -3,28 +3,23 @@ import { Alert, Col, Container, Row } from 'react-bootstrap'
 import { CardKitchen } from '../../components/CardKitchen'
 import { Layout } from '../../components/Layout'
 import { Loading } from '../../components/Loading'
-
-
-
+import { getKitchens } from '../../services/Kitchens.service'
     
     export function KitchensView () {
         const[kitchens, setKitchens] = useState([])
         const [loading, setLoading] = useState(true)
         const [errorMsg, setErrorMsg] = useState()
         useEffect(() => {
-            fetch('http://localhost:3001/kitchens')
-                .then((response) => response.json())
-                .then((data) => {
-                    setKitchens(data)
-                    setLoading(false)
-                })
-                .catch(() => {
-                    setErrorMsg ('Falha ao buscar informações. Recarregue a página.')
-                    setLoading(false)
-                })
-                .finally(() => {
-                    setLoading(false)
-                })
+            const fetchKitchens = async () => {
+            try {
+                const data = await getKitchens()
+                setKitchens(data)
+            }catch{
+                setErrorMsg ('Falha ao buscar informações. Recarregue a página.')
+            }
+            setLoading(false)
+        }
+        fetchKitchens()
         }, [])
         return (
             <Layout>

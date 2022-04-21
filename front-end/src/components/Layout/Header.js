@@ -1,6 +1,6 @@
 
 import { Container, Nav, Navbar} from 'react-bootstrap'
-import Logo from '/front-end/src/assets/img/2.svg'
+import Logo from '../../assets/img/2.svg'
 import { Link } from "react-router-dom"
 
 export function Header () {
@@ -16,7 +16,7 @@ export function Header () {
                 <Navbar.Collapse id='navbar-header'>
                 <Nav className='ms-auto'>
                     <Nav.Link as={Link} to='/'>HOME</Nav.Link>
-                    <Nav.Link as={Link} to='/kitchens'>KITCHENS</Nav.Link>
+                    <Nav.Link as={Link} to='/kitchens'>PLANOS</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
           </Container> 

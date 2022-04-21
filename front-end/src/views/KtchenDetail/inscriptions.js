@@ -24,7 +24,7 @@ export function Inscriptions ({ inscriptions}) {
             </tbody>
         </Table>
      ) : (
-         <Alert variant="info">Este curso ainda não possui alunos inscritos.</Alert>
+         <Alert variant="info">Este plano ainda não possui participantes.</Alert>
      )}
     </>
     )

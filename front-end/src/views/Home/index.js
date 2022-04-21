@@ -1,6 +1,6 @@
 import { Button, Container } from 'react-bootstrap'
 import { Layout } from '../../components/Layout'
-import Banner from  '/front-end/src/assets/img/banner1.jpg  '
+import Banner from  '../../assets/img/banner1.jpg'
 import { Link } from 'react-router-dom'
 
 export function HomeView () {
@@ -12,7 +12,7 @@ export function HomeView () {
                     <h1>Bem vindo(a) a Nutri Food.</h1>  
                     <p>Conheça nossos planos fit.</p>
                     <p>Contrate o seu agora mesmo!</p>
-                    <Button as={Link} to='/Kitchens' className='text-uppercase' >Planos</Button>
+                    <Button as={Link} to='/Kitchens' className='text-uppercase btn-primary' >Planos</Button>
                   </div>
                   <div> 
                     <img src={Banner} alt='Nutri-Food' width={626} height={391} className='img-fluid' />
