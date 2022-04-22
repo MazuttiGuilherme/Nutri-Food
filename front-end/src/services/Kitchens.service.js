@@ -1,5 +1,7 @@
+import { apiUrl} from "./Api.service"
+
 export const getKitchens = async () => {
-    const response = await fetch(`http://localhost:3001/kitchens`);
+    const response = await fetch(`${apiUrl}/kitchens`);
     if (!response.ok) {
         throw new Error('Response not ok.')
     }
@@ -7,7 +9,7 @@ export const getKitchens = async () => {
 }
 
 export const getKitchenById = async (kitchenId) => {
-    const response = await fetch(`http://localhost:3001/kitchens/${kitchenId}?_embed=inscriptions`);
+    const response = await fetch(`${apiUrl}/kitchens/${kitchenId}?_embed=inscriptions`);
     if (!response.ok) {
         throw new Error('Response not ok.')
     }
