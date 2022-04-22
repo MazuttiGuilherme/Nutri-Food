@@ -7,6 +7,7 @@ import { getKitchenById } from "../../services/Kitchens.service";
 import { NotFoundView } from "../NotFound";
 import { InscriptionForm } from "./inscriptionForm";
 import { Inscriptions } from "./inscriptions";
+import styled from "styled-components"
 
 export function KitchenDetailView() {
   const { id } = useParams();
@@ -37,7 +38,7 @@ export function KitchenDetailView() {
   }
   return (
     <Layout>
-        <Container className="kitchen-detail-container">
+        <ContainerStyled>
             {errorMsg ? (
                 <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
             ) :(
@@ -48,7 +49,12 @@ export function KitchenDetailView() {
             <InscriptionForm kitchenId={id} onRegister= {fetchKitchen} />
         </>
             )}
-        </Container>
+        </ContainerStyled>
     </Layout>
   );
 }
+
+
+const ContainerStyled = styled(Container)`
+ max-width: 900px;
+ `
