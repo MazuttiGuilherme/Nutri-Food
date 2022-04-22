@@ -1,1 +1,1 @@
-export const apiURL = ('http://localhost:3001/inscriptions')
+export const apiUrl = ('http://localhost:3001/inscriptions')
