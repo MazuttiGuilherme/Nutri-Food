@@ -15,13 +15,6 @@
       "id": 2
     },
     {
-      "img": "/img/photo6.jpg",
-      "name": "Slim-Fit",
-      "shortDescription": "Neste plano, 2 refeições por dia, de segunda à sexta seguindo às orientações de preparo. ",
-      "description": "Est accusamus enim qui velit unde in voluptatum rerum ut minus omnis et amet consectetur eos ullam officiis. Vel dolores et iusto voluptatibus At omnis dolor aut ullam amet qui ipsa ipsam est ipsum velit eos explicabo sint.",
-      "id": 3
-    },
-    {
       "img": "/img/photo1.jpg",
       "name": "Slim-Fit2",
       "shortDescription": "Duas refeições por dia, de segunda à sexta seguindo às orientações de preparo. ",
@@ -57,66 +50,26 @@
       "id": 8
     }
   ],
-  "inscriptions": [
+  "inscriptions": [],
+  "users": [
     {
-      "name": "Guilherme Mazutti",
-      "email": "guilherme@guilherme.com",
-      "kitchenId": null,
+      "email": "aluno@aluno.com",
+      "password": "123456",
+      "name": "Aluno",
+      "type": 2,
       "id": 1
     },
     {
-      "name": "Guilherme Mazutti",
-      "email": "guilherme@guilherme.com",
-      "kitchenId": 4,
+      "email": "admin@admin.com",
+      "password": "123456",
+      "name": "Administrador",
+      "type": 1,
       "id": 2
     },
     {
-      "name": "Guilherme Mazutti",
-      "email": "mazuttimail@gmail.com",
-      "kitchenId": 3,
+      "email": "admin@admin.com",
+      "password": "123456",
       "id": 3
-    },
-    {
-      "name": "ana beattriz",
-      "email": "anabeatriz@anabeatriz.com",
-      "kitchenId": 7,
-      "id": 4
-    },
-    {
-      "name": "Giulia Mazutti",
-      "email": "giulia@giulia.com",
-      "kitchenId": 5,
-      "id": 5
-    },
-    {
-      "name": "Ana Beatriz",
-      "email": "anabeatriz@anabeatriz.com",
-      "kitchenId": 8,
-      "id": 6
-    },
-    {
-      "name": "Giulia Mazutti",
-      "email": "giulia@giulia.com",
-      "kitchenId": 7,
-      "id": 7
-    },
-    {
-      "name": "Guilherme Mazutti",
-      "email": "guilherme@guilherme.com",
-      "kitchenId": 7,
-      "id": 8
-    },
-    {
-      "name": "Ana Beatriz",
-      "email": "anabeatriz@anabeatriz.com",
-      "kitchenId": 7,
-      "id": 9
-    },
-    {
-      "name": "Ana Beatriz",
-      "email": "anabeatriz@anabeatriz.com",
-      "kitchenId": 3,
-      "id": 10
     }
   ]
 }
