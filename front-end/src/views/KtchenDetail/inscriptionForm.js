@@ -8,7 +8,7 @@ const initialFormData = {
 
 }
 
-export function InscriptionForm (kitchenId, onRegister) {
+export function InscriptionForm ({kitchenId, onRegister}) {
     const [showSuccess, setShowSuccess] = useState(false)
     const [isSubmiting, setIsSubmiting] = useState(false)
     const [errorMsg, setErrorMsg] = useState()

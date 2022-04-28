@@ -32,9 +32,9 @@ import { getKitchens } from '../../services/Kitchens.service'
                         <Alert variant='danger'>{errorMsg}</Alert>
                     )}
                         <Row>
-                        {kitchens.map((kitchen) => (
-                            <Col key={kitchen.id} className='mb-4' xs={6} sm={4} lg={3}>
-                                <CardKitchen kitchen={kitchen} />
+                        {kitchens.map((kitchens) => (
+                            <Col key={kitchens.id} className='mb-4' xs={6} sm={4} lg={3}>
+                                <CardKitchen kitchen={kitchens} />
                             </Col>
                         ))}
                     </Row>
