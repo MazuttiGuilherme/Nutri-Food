@@ -25,7 +25,7 @@ export function Sidebar({ isOpen, onClose }) {
         onClick={onClose}
         className="ms-auto d-lg-none"
       />
-      <p className="h1">Portal Nutri-Food</p>
+      <p className="h1">Nutri-Food</p>
       <hr />
       <Nav variant="pills" className="flex-column">
         {menuItems.map((item, index) => (
