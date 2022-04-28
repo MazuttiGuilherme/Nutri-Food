@@ -12,10 +12,7 @@ export function InscriptionForm ({kitchenId, onRegister}) {
     const [showSuccess, setShowSuccess] = useState(false)
     const [isSubmiting, setIsSubmiting] = useState(false)
     const [errorMsg, setErrorMsg] = useState()
-    const [formData, setFormData] = useState({
-        userName: '',
-        userEmail:''
-    })
+    const [formData, setFormData] = useState(initialFormData)
     const handleChange = (event) => {
         setFormData({
             ...formData,

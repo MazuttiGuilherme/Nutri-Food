@@ -18,6 +18,7 @@ export function Header () {
                 <Nav className='ms-auto'>
                     <NavLinkStyled forwardedAs={Link} to='/'>HOME</NavLinkStyled>
                     <NavLinkStyled forwardedAs={Link} to='/kitchens'>PLANOS</NavLinkStyled>
+                    <NavLinkStyled forwardedAs={Link} to='/portal/login'>ENTRAR</NavLinkStyled>
                 </Nav>
             </Navbar.Collapse>
           </Container> 
