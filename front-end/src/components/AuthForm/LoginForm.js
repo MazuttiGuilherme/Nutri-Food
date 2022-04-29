@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { toast } from "react-toastify";
+import { login } from "../../services/Users.service";
 
 export function LoginForm () {
     const [formData, setFormData] = useState({
@@ -12,8 +14,17 @@ export function LoginForm () {
             [event.target.name]: event.target.value
         })
     }
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
+        try {
+            await login(formData)
+        }catch (error) {
+            const message = error.message === 'Credentials invalid.'
+              ? 'E-mail ou senha inválidos.'
+              : 'Falha ao fazer login. Tente novamente.'
+            console.error(error)
+            toast.error(message)
+        }
     }
         return (
         <Form onSubmit={handleSubmit}>
