@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { login } from "../../services/Users.service";
 
@@ -14,10 +15,17 @@ export function LoginForm () {
             [event.target.name]: event.target.value
         })
     }
+    const dispatch = useDispatch()
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            await login(formData)
+            const userData = await login(formData)
+            // Enviar para Redux
+            const action = {
+                type:'USER_LOGIN',
+                payload: userData
+            }
+            dispatch(action)
         }catch (error) {
             const message = error.message === 'Credentials invalid.'
               ? 'E-mail ou senha inválidos.'
