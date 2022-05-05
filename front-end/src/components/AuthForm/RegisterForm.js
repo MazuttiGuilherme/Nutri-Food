@@ -36,7 +36,7 @@ export function RegisterForm () {
                         placeholder="exemplo@exemplo.com"
                         value={formData.email}
                         onChange={handleChange}
-                        name="userEmail"
+                        name="email"
                         required
                     />
             </Form.Group>

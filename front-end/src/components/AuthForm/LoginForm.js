@@ -25,7 +25,7 @@ export function LoginForm () {
                 type:'USER_LOGIN',
                 payload: userData
             }
-            dispatch(action)
+            dispatch(action)    
         }catch (error) {
             const message = error.message === 'Credentials invalid.'
               ? 'E-mail ou senha inválidos.'
@@ -44,7 +44,7 @@ export function LoginForm () {
                         placeholder="exemplo@exemplo.com"
                         value={formData.email}
                         onChange={handleChange}
-                        name="userEmail"
+                        name="email"
                         required
                     />
             </Form.Group>
