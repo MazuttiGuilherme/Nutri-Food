@@ -4,12 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { logout } from "../../services/Users.service";
 import { useNavigate } from "react-router-dom";
 import { userLogout } from "../../store/User/User.actions";
+import { selectUser } from "../../store/User/User.selectors";
 
 export function Topbar({ onOpen }) {
-  const user = useSelector((state) => {
-    return state
-
-  })
+  const user = useSelector(selectUser)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const handleLogout = () => {
