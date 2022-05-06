@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { login } from "../../services/Users.service";
+import { useNavigate } from "react-router-dom"
 
 export function LoginForm () {
     const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ export function LoginForm () {
         })
     }
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
@@ -25,12 +27,12 @@ export function LoginForm () {
                 type:'USER_LOGIN',
                 payload: userData
             }
-            dispatch(action)    
+            dispatch(action)
+            navigate('/portal')
         }catch (error) {
             const message = error.message === 'Credentials invalid.'
               ? 'E-mail ou senha inválidos.'
               : 'Falha ao fazer login. Tente novamente.'
-            console.error(error)
             toast.error(message)
         }
     }

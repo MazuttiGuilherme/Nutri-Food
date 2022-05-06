@@ -1,21 +1,10 @@
 import { createStore } from "redux";
-import { getStorageItem } from "../services/Storage.service";
-
-const user = JSON.parse(getStorageItem('user'))
+import { userReducer } from "./User/User.reducer";
 
 
-const reducer = (state, action) => {
-  console.log(state, action);
-  if (action.type === "@@INIT") {
-    return user || null;
-  }
-  if (action.type === 'USER_LOGIN') {
-      return action.payload
-    }
-    
-};
+
 
 export const store = createStore(
-  reducer,
+  userReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
