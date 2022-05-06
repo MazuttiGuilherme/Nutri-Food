@@ -11,7 +11,7 @@ export function DashboardView () {
       {user.type === 1 ? (
         <p>Utilize o menu para gerenciar os dados do site.</p>
       ) : (
-      <Alert variant="info">Você receberá todas as informações do Plano por e-mail</Alert>
+      <Alert variant="info">Você receberá todas as informações do Plano por e-mail.</Alert>
       )}
     </LayoutPortal>
   )
