@@ -50,26 +50,40 @@
       "id": 8
     }
   ],
-  "inscriptions": [],
+  "inscriptions": [
+    {
+      "name": "Guilherme Mazutti",
+      "email": "guilherme@guilherme.com",
+      "kitchenId": 4,
+      "id": 1
+    },
+    {
+      "name": "Guilherme Mazutti",
+      "email": "guilherme@guilherme.com",
+      "kitchenId": 5,
+      "id": 2
+    },
+    {
+      "name": "Guilherme Mazutti",
+      "email": "guilherme@guilherme.com",
+      "kitchenId": 5,
+      "id": 3
+    }
+  ],
   "users": [
     {
       "email": "aluno@aluno.com",
-      "password": "123456",
+      "password": "$2a$10$HnZwLFja1e0jsjnCn8AKH.TP1Ew2ooucN7QHHtuEuRpEJhGD0p3ju",
       "name": "Aluno",
       "type": 2,
       "id": 1
     },
     {
       "email": "admin@admin.com",
-      "password": "123456",
+      "password": "$2a$10$.R7VY52ILRe73Xfhx9RZXeUeOClPX2nTl4lHodER/FKcZHI47AyoK",
       "name": "Administrador",
       "type": 1,
       "id": 2
-    },
-    {
-      "email": "admin@admin.com",
-      "password": "123456",
-      "id": 3
     }
   ]
 }

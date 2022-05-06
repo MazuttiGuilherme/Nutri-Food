@@ -3,8 +3,11 @@ import { Container, Nav, Navbar} from 'react-bootstrap'
 import Logo from '../../assets/img/2.svg'
 import { Link } from "react-router-dom"
 import styled from 'styled-components'
+import { useSelector } from 'react-redux'
+import { selectIsUserLoggedIn } from '../../store/User/User.selectors'
 
 export function Header () {
+  const isUserLoggedIn = useSelector(selectIsUserLoggedIn)
     return (
       <header>
         <NavbarStyled expand='md'>
@@ -16,9 +19,13 @@ export function Header () {
                     aria-controls='navbar-header'/>
                 <Navbar.Collapse id='navbar-header'>
                 <Nav className='ms-auto'>
-                    <NavLinkStyled forwardedAs={Link} to='/'>HOME</NavLinkStyled>
-                    <NavLinkStyled forwardedAs={Link} to='/kitchens'>PLANOS</NavLinkStyled>
-                    <NavLinkStyled forwardedAs={Link} to='/portal/login'>ENTRAR</NavLinkStyled>
+                    <NavLinkStyled forwardedAs={Link} to='/'>Home</NavLinkStyled>
+                    <NavLinkStyled forwardedAs={Link} to='/kitchens'>Planos</NavLinkStyled>
+                    {isUserLoggedIn ? (
+                      <NavLinkStyled forwardedAs={Link} to='/portal'>Acessar portal</NavLinkStyled>
+                    ) : (
+                      <NavLinkStyled forwardedAs={Link} to='/portal/login'>Login</NavLinkStyled>
+                    )}
                 </Nav>
             </Navbar.Collapse>
           </Container> 
