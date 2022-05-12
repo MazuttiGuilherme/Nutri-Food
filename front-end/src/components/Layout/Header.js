@@ -22,7 +22,7 @@ export function Header () {
                     <NavLinkStyled forwardedAs={Link} to='/'>Home</NavLinkStyled>
                     <NavLinkStyled forwardedAs={Link} to='/kitchens'>Planos</NavLinkStyled>
                     {isUserLoggedIn ? (
-                      <NavLinkStyled forwardedAs={Link} to='/portal'>Acessar portal</NavLinkStyled>
+                      <NavLinkStyled forwardedAs={Link} to='/portal'>Acessar Portal</NavLinkStyled>
                     ) : (
                       <NavLinkStyled forwardedAs={Link} to='/portal/login'>Login</NavLinkStyled>
                     )}
