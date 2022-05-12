@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom"
 import { userLogin } from "../../store/User/User.actions";
 
 export function LoginForm ({ redirectAfterLogin }) {
+    const [isSubmiting, setIsSubmiting] = useState(false)
     const [formData, setFormData] = useState({
         email:'',
         password: ''
@@ -22,6 +23,7 @@ export function LoginForm ({ redirectAfterLogin }) {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
+            setIsSubmiting(true)
             const userData = await login(formData)
             // Enviar para Redux
             dispatch(userLogin(userData))
@@ -33,6 +35,7 @@ export function LoginForm ({ redirectAfterLogin }) {
               ? 'E-mail ou senha inválidos.'
               : 'Falha ao fazer login. Tente novamente.'
             toast.error(message)
+            setIsSubmiting(false)
         }
     }
         return (
@@ -60,7 +63,7 @@ export function LoginForm ({ redirectAfterLogin }) {
                         required
                     />
             </Form.Group>
-                <Button type='submit'>Entrar</Button>
+                <Button type='submit' disabled={isSubmiting}>Entrar</Button>
         </Form>
     )
 }

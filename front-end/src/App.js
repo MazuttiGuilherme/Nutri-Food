@@ -3,7 +3,7 @@ import { PrivateRoute } from './components/PrivateRoute';
 import { DashboardView } from './views/Dashboard';
 import { HomeView } from './views/Home';
 import { KitchensView } from './views/Kitchens';
-import { KitchenDetailView } from './views/KtchenDetail';
+import { KitchenDetailView } from './views/KitchenDetail';
 import { LoginView } from './views/Login';
 import { NotFoundView } from './views/NotFound'
 

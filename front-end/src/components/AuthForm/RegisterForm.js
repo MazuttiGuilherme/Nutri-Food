@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 import { createUser } from "../../services/Users.service";
 import { userLogin } from "../../store/User/User.actions";
 
-export function RegisterForm (redirectAfterLogin) {
+export function RegisterForm ({redirectAfterLogin}) {
+    const [isSubmiting, setIsSubmiting] = useState(false)
     const [formData, setFormData] = useState({
         name:'',
         email:'',
@@ -23,6 +24,7 @@ export function RegisterForm (redirectAfterLogin) {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
+            setIsSubmiting(true)
             const userData = await createUser(formData)
             dispatch(userLogin(userData))
             if (redirectAfterLogin) {
@@ -33,6 +35,7 @@ export function RegisterForm (redirectAfterLogin) {
             ? 'Este e-mail já está em uso.'
             : 'Falha ao fazer cadastro. Tente novamente.'
             toast.error(message)
+            setIsSubmiting(false)
         }
     }
         return (
@@ -70,7 +73,7 @@ export function RegisterForm (redirectAfterLogin) {
                         required
                     />
             </Form.Group>
-                <Button type='submit'>Criar conta</Button>
+                <Button type='submit' disabled={isSubmiting}>Criar conta</Button>
         </Form>
     )
 }
