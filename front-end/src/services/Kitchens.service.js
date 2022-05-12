@@ -1,4 +1,4 @@
-import { apiUrl} from "./Api.service"
+import { apiUrl, getAuthorizationHeaders} from "./Api.service"
 
 export const getKitchens = async () => {
     const response = await fetch(`${apiUrl}/kitchens`);
@@ -14,4 +14,14 @@ export const getKitchenById = async (kitchenId) => {
         throw new Error('Response not ok.')
     }
     return response.json()
+}
+
+export const deletekitchen = async kitchenId => {
+    const response = await fetch(`${apiUrl}/kitchens/${kitchenId}`, {
+        method:'DELETE',
+        headers: getAuthorizationHeaders()
+    })
+    if (!response.ok) {
+        throw new Error('Response not ok.')
+    }
 }

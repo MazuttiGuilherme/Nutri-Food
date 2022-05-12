@@ -1,9 +1,16 @@
 import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { deletekitchen } from "../../services/Kitchens.service";
 
-export function TableKitchens ({kitchens}) {
-    const handleClick = (kitchen) => {
-        console.log( 'oi', kitchen)
+export function TableKitchens ({kitchens, onDeleteKitchen}) {
+    const handleClick = async (kitchen) => {
+        try {
+            await deletekitchen(kitchen.id)
+            await onDeleteKitchen()
+        } catch {
+            toast.error('Falha ao deletar plano. Tente novamente.')
+        }
     }
     return (
         <Table striped hover responsive>
