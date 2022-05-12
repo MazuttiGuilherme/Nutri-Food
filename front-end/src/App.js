@@ -6,6 +6,7 @@ import { KitchensView } from './views/Kitchens';
 import { KitchenDetailView } from './views/KitchenDetail';
 import { LoginView } from './views/Login';
 import { NotFoundView } from './views/NotFound'
+import { AdminKitchensView } from './views/AdminKitchens';
 
 function App() {
   return(
@@ -21,6 +22,7 @@ function App() {
       </PrivateRoute>
       }
       />
+      <Route path='/portal/kitchens' element={<PrivateRoute userTypes={[1]}><AdminKitchensView /></PrivateRoute>} />
       <Route path='/portal/login' element={<LoginView />} />
       <Route path='*' element={<NotFoundView />} />
     </Routes>
