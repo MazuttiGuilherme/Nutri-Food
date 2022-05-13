@@ -16,14 +16,7 @@ function App() {
       <Route path='/' element={<HomeView />} />
       <Route path='/kitchens' element={<KitchensView />} />
       <Route path='/kitchen/:id' element={<KitchenDetailView/>} />
-      <Route 
-      path='/portal'
-      element={
-      <PrivateRoute>
-        <DashboardView />
-      </PrivateRoute>
-      }
-      />
+      <Route path='/portal' element={<PrivateRoute><DashboardView /></PrivateRoute>}/>
       <Route path='/portal/kitchens' element={<PrivateRoute userTypes={[1]}><AdminKitchensView /></PrivateRoute>} />
       <Route path='/portal/kitchens/cadastro' element={<PrivateRoute userTypes={[1]}><AdminAddKitchenView /></PrivateRoute>} />
       <Route path='/portal/kitchens/:id' element={<PrivateRoute userTypes={[1]}><AdminEditKitchenView /></PrivateRoute>} />

@@ -8,13 +8,15 @@ const menuItems = [
   {
     to: "/portal",
     text: "Dashboard",
+    checkAllPath: true,
     userTypes: [1, 2]
   },
   {
     to: "/portal/kitchens",
     text: "Planos",
+    checkAllPath: false,
     userTypes: [1]
-  },
+  }
 ];
 
 export function Sidebar({ isOpen, onClose }) {
