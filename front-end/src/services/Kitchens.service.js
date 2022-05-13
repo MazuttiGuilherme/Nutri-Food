@@ -40,3 +40,18 @@ export const createKitchen = async kitchenData => {
         throw new Error('Response not ok.')
     }
 }
+
+export const updateKitchen = async (kitchenId, kitchenData) => {
+    const body = JSON.stringify(kitchenData)
+    const response = await fetch(`${apiUrl}/kitchen/${kitchenId}`, {
+        method:  'PUT',
+        body,
+        headers:{
+            'content-type': 'application/json',
+            ...getAuthorizationHeaders()
+        }
+    })
+    if (!response.ok) {
+        throw new Error('Response not ok.')
+    }
+}

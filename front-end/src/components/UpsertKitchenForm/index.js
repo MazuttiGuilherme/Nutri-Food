@@ -25,7 +25,7 @@ export function UpsertKitchenForm ({ initialValue = emptyFormData, buttonLabel =
         <Form onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId="kitchen-name">
                 <Form.Label className='mb-0'>Nome</Form.Label>
-                <Form.Control placeholder='Nome do curso' name='name' value={formData.name} onChange={handleChange} required />
+                <Form.Control placeholder='Nome do plano' name='name' value={formData.name} onChange={handleChange} required />
             </Form.Group>
             <Form.Group className='mb-3' controlId="kitchen-short-description">
                 <Form.Label className='mb-0'>Descrição curta</Form.Label>
@@ -38,7 +38,7 @@ export function UpsertKitchenForm ({ initialValue = emptyFormData, buttonLabel =
             <Form.Group className='mb-3' controlId="kitchen-image">
                 <Form.Label className='mb-0'>Imagem</Form.Label>
                 <Form.Control placeholder='Imagem que aparece na listagem do plano' name='image' value={formData.image} onChange={handleChange} required />
-                <Form.Text>Cole aqui o link da imagem hospedada no <a href='https://cloudinary.com' target='_blank' rel="noreferrer">cloudinary.</a></Form.Text>
+                <Form.Text>Cole aqui o link da imagem hospedada no <a href='https://cloudinary.com' target='_blank' rel="noreferrer">Cloudinary.</a></Form.Text>
             </Form.Group>
             <Button type='submit'>{buttonLabel}</Button>
         </Form>
