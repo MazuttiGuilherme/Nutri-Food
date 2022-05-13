@@ -7,6 +7,7 @@ import { KitchenDetailView } from './views/KitchenDetail';
 import { LoginView } from './views/Login';
 import { NotFoundView } from './views/NotFound'
 import { AdminKitchensView } from './views/AdminKitchens';
+import { AdminAddKitchenView} from './views/AdminAddKitchen'
 
 function App() {
   return(
@@ -23,6 +24,7 @@ function App() {
       }
       />
       <Route path='/portal/kitchens' element={<PrivateRoute userTypes={[1]}><AdminKitchensView /></PrivateRoute>} />
+      <Route path='/portal/kitchens/cadastro' element={<PrivateRoute userTypes={[1]}><AdminAddKitchenView /></PrivateRoute>} />
       <Route path='/portal/login' element={<LoginView />} />
       <Route path='*' element={<NotFoundView />} />
     </Routes>
