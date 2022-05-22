@@ -67,7 +67,7 @@ export function TableKitchens({ kitchens, onDeleteKitchen }) {
           realmente excluir o plano?
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick-={hideModal}>
+          <Button variant="secondary" onClick={hideModal}>
             Cancelar
           </Button>
           <Button variant="danger" onClick={handleDelete}>Deletar plano</Button>

@@ -28,7 +28,7 @@ export const deletekitchen = async kitchenId => {
 
 export const createKitchen = async kitchenData => {
     const body = JSON.stringify(kitchenData)
-    const response = await fetch(`${apiUrl}/course`,{
+    const response = await fetch(`${apiUrl}/kitchens`,{
         method: 'POST',
         body,
         headers: {
@@ -43,7 +43,7 @@ export const createKitchen = async kitchenData => {
 
 export const updateKitchen = async (kitchenId, kitchenData) => {
     const body = JSON.stringify(kitchenData)
-    const response = await fetch(`${apiUrl}/kitchen/${kitchenId}`, {
+    const response = await fetch(`${apiUrl}/kitchens/${kitchenId}`, {
         method:  'PUT',
         body,
         headers:{

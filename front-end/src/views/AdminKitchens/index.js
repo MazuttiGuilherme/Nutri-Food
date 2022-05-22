@@ -27,7 +27,7 @@ export function AdminKitchensView() {
       <PortalHeader
         title="Planos cadastrados"
         buttonText="Novo plano"
-        buttonLink="/portal/kitchen/cadastro"
+        buttonLink="/portal/kitchens/cadastro"
       />
       {loading && <Loading />}
       <TableKitchens kitchens={kitchens} onDeleteKitchen={fetchKitchens} />
