@@ -2,7 +2,7 @@
 </br>
 <p align='center'>
  <a href="https://nutri-food.netlify.app/">
- <img src="assets/img/2.svg" alt="Logo Nutri Food">
+ <img src="../../assets/img/2.svg" alt="Logo Nutri Food">
  </a>
  </p>
    <h3 align="center">Nutri Food</h3>
