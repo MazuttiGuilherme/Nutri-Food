@@ -1,7 +1,7 @@
 # Nutri Food
 </br>
   <p align="center">
-     Kits completos de refeições low carb deliciosas, nutritivas, balanceadas e saudáveis a um clique de distância; direto na sua casa. 
+     Catálogo completos de refeições low carb deliciosas, nutritivas e saudáveis onde o cliente pode se cadastrar e inscrever nos planos desejados.
     <br />
     <a href="https://nutri-food.netlify.app/"><strong>Acessar demonstração »</strong></a>
   </p>
